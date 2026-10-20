@@ -1,25 +1,437 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arjun M - Software Engineer & Cyber Security Portfolio</title>
-    <meta name="description" content="Portfolio of Arjun M - Final-Year CSE (Cyber Security) Student, Full-Stack Developer & Security Researcher. Hands-on experience with React, Node.js, Express, MySQL, OWASP Top 10, and AWS." />
-    <meta property="og:title" content="Arjun M - Software Engineer & Cyber Security Portfolio" />
-    <meta property="og:description" content="Portfolio of Arjun M - Final-Year CSE (Cyber Security) Student, Full-Stack Developer & Security Researcher. Hands-on experience with React, Node.js, Express, MySQL, OWASP Top 10, and AWS." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-white text-stone-900 antialiased selection:bg-orange-500 selection:text-white">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ARJUN M | Senior Full Stack Developer, Cyber Security Enthusiast & Frontend Designer. Portfolio showcasing high-performance web platforms, security architecture, and modern visual design.">
+  <meta name="keywords" content="Arjun M, Full Stack Developer, Cyber Security, Penetration Testing, Frontend Designer, React, Node.js, Web Security">
+  <meta name="author" content="Arjun M">
 
-    <div id="root"></div>
-    <!-- <script type="module" src="/src/main.tsx"></script> -->
-    <link rel="stylesheet" href="/src/index.css">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="ARJUN M | Full Stack Developer & Cyber Security Specialist">
+  <meta property="og:description" content="Dark luxury developer portfolio & cyber security shell by Arjun M. Explore web apps, security audits, and frontend design.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/profile.jpg">
 
-<script type="module" src="/src/main.tsx"></script>
-  </body>
-  
+  <title>ARJUN M | Full Stack Developer & Cyber Security Specialist</title>
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Laser Orbs -->
+  <div class="ambient-laser laser-lime" style="top: 2%; left: -10%;"></div>
+  <div class="ambient-laser laser-blue" style="top: 40%; right: -10%;"></div>
+  <div class="ambient-laser laser-lime" style="bottom: 5%; left: 20%;"></div>
+
+  <!-- 1. NAVBAR COMPONENT (Floating Pill Glass Bar) -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#hero" class="brand-logo">
+        <span class="live-pulse"></span>
+        <span class="gradient-text-lime">ARJUN M</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-item active">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#experience" class="nav-item">Timeline</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#terminal" class="nav-item">Terminal</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="btn-cli" id="quickTerminalBtn" title="Launch CLI Shell">
+          <i class="fa-solid fa-terminal"></i> [ CLI ]
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 2. LUXURY HERO COMPONENT -->
+  <section class="hero-luxury" id="hero">
+    <canvas id="cyberMatrixCanvas"></canvas>
+
+    <div class="container hero-content">
+      <div class="role-badge">
+        <i class="fa-solid fa-shield-halved"></i> Full Stack • Cyber Security • Frontend Design
+      </div>
+
+      <h1 class="hero-display-title">
+        Securing Systems. <br>
+        Crafting <span class="gradient-text-lime">Digital Luxury</span>.
+      </h1>
+
+      <div class="hero-subhead">
+        I am a <span id="typedElement" class="text-lime"></span><span class="typed-cursor">_</span>
+      </div>
+
+      <p class="hero-description">
+        Bridging high-performance backend architecture, modern web design aesthetics, and robust cyber security posture to build resilient, state-of-the-art web systems.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-neon">
+          <i class="fa-solid fa-bolt"></i> View Work
+        </a>
+        <a href="#terminal" class="btn-glass">
+          <i class="fa-solid fa-terminal"></i> Launch Security Shell
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT & LIVE STATS COMPONENT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="profile-card-wrapper">
+          <div class="profile-glass-frame">
+            <img src="assets/profile.jpg" alt="ARJUN M Profile Portrait">
+          </div>
+          <div class="security-badge">
+            <div class="security-badge-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div class="security-badge-text">
+              <h5>Security Verified</h5>
+              <p>Full Stack & PenTesting</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-tag"><i class="fa-solid fa-fingerprint"></i> Identity & Ethos</div>
+          <h3>Full Stack Developer & Cyber Security Enthusiast</h3>
+          <p class="about-bio-text">
+            I'm <strong>ARJUN M</strong>. I engineer secure, high-speed full-stack applications with an unrelenting focus on visual luxury, pixel-perfect UX, and proactive threat mitigation.
+          </p>
+          <p class="about-bio-text">
+            My expertise ranges from building distributed React & Node.js microservices to conducting API vulnerability assessments, OAuth2/JWT security hardening, and crafting Awwwards-level interactive web interfaces.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-val" data-target="5">0</div>
+              <div class="stat-desc">Years Engineering</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val" data-target="40">0</div>
+              <div class="stat-desc">Projects & Audits</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val" data-target="100">0</div>
+              <div class="stat-desc">% Security Compliance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SKILL CARDS COMPONENT -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <div class="section-tag"><i class="fa-solid fa-microchip"></i> Capabilities</div>
+        <h2 class="section-title">Technical Matrix</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Equipped with modern full-stack frameworks, security tooling, and design systems.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="tab-pill active" data-filter="all">All Disciplines</button>
+        <button class="tab-pill" data-filter="fullstack">Full Stack</button>
+        <button class="tab-pill" data-filter="cyber">Cyber Security</button>
+        <button class="tab-pill" data-filter="frontend">Frontend & Design</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Rendered dynamically via main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TIMELINE COMPONENT -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <div class="section-tag"><i class="fa-solid fa-timeline"></i> Track Record</div>
+        <h2 class="section-title">Career & Security Milestones</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Chronological evolution across engineering, security auditing, and design leadership.</p>
+      </div>
+
+      <div class="cyber-timeline">
+        <div class="timeline-node">
+          <div class="node-pulse"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-time">2023 - PRESENT</span>
+            <h3 class="timeline-role">Lead Engineer & Security Lead</h3>
+            <div class="timeline-org">Nexus Tech Solutions</div>
+            <p class="timeline-body">
+              Architecting secure cloud microservices, managing penetration testing cycles, and building Next.js enterprise portals with Zero-Trust authentication protocols.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="node-pulse"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-time">2021 - 2023</span>
+            <h3 class="timeline-role">Senior Full Stack & Security Auditor</h3>
+            <div class="timeline-org">Apex Digital Labs</div>
+            <p class="timeline-body">
+              Led frontend design system architecture, implemented automated SAST/DAST security scanning pipelines, and reduced application vulnerabilities by 80%.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="node-pulse"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-time">2019 - 2021</span>
+            <h3 class="timeline-role">Full Stack Web Developer</h3>
+            <div class="timeline-org">Vanguard Systems</div>
+            <p class="timeline-body">
+              Engineered high-throughput REST APIs, built responsive client web apps, and audited web application security against OWASP Top 10 risks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FEATURED PROJECT CARDS COMPONENT -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <div class="section-tag"><i class="fa-solid fa-cubes"></i> Portfolio</div>
+        <h2 class="section-title">Featured Engineering Projects</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">A collection of full-stack products, security visualizers, and digital platforms.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="glass-card project-card-awwwards">
+          <div class="project-media">
+            <img src="assets/project1.jpg" alt="Quantum Insights AI & Security Dashboard">
+            <div class="project-overlay">
+              <button class="btn-neon open-modal-btn" data-project="0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-lime">Cyber Security</span>
+              <span class="tag-lime">React</span>
+              <span class="tag-lime">Node.js</span>
+            </div>
+            <h3 class="project-title">Quantum Insights Security Dashboard</h3>
+            <p class="project-desc">
+              Real-time threat monitoring & telemetry platform featuring anomaly detection, API rate-limiting visualizers, and cloud cluster security metrics.
+            </p>
+            <button class="btn-cli open-modal-btn" data-project="0">
+              [ VIEW_ARCHITECTURE ]
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="glass-card project-card-awwwards">
+          <div class="project-media">
+            <img src="assets/project2.jpg" alt="Vogue Noir Luxury E-Commerce">
+            <div class="project-overlay">
+              <button class="btn-neon open-modal-btn" data-project="1">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-lime">Full Stack</span>
+              <span class="tag-lime">Next.js 14</span>
+              <span class="tag-lime">Stripe Auth</span>
+            </div>
+            <h3 class="project-title">Vogue Noir Luxury E-Commerce</h3>
+            <p class="project-desc">
+              Ultra-minimal fashion store engineered with Awwwards glassmorphism UI, PCI-DSS compliant checkout, and real-time inventory management.
+            </p>
+            <button class="btn-cli open-modal-btn" data-project="1">
+              [ VIEW_ARCHITECTURE ]
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="glass-card project-card-awwwards">
+          <div class="project-media">
+            <img src="assets/project3.jpg" alt="CloudOps Node Security Monitor">
+            <div class="project-overlay">
+              <button class="btn-neon open-modal-btn" data-project="2">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-lime">DevOps & Cloud</span>
+              <span class="tag-lime">Docker</span>
+              <span class="tag-lime">Security Mesh</span>
+            </div>
+            <h3 class="project-title">CloudOps Security Node Visualizer</h3>
+            <p class="project-desc">
+              Distributed Kubernetes cluster security scanner providing microservices mesh visualizer, pod isolation alerts, and traffic attack mitigation.
+            </p>
+            <button class="btn-cli open-modal-btn" data-project="2">
+              [ VIEW_ARCHITECTURE ]
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. INTERACTIVE TERMINAL COMPONENT -->
+  <section class="section terminal-section" id="terminal">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <div class="section-tag"><i class="fa-solid fa-terminal"></i> Interactive Shell</div>
+        <h2 class="section-title">arjun-shell v2.4</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Type commands into the CLI to interact directly with Arjun's security workstation.</p>
+      </div>
+
+      <div class="cyber-terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="terminal-title">arjun@security-node:~ (bash)</span>
+          <span style="font-size: 0.75rem; color: var(--accent-neon-lime);">[ SECURE ]</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="terminal-output-line">ARJUN M Security CLI Workspace [Version 2.4.0-release]</div>
+          <div class="terminal-output-line">Type <span class="text-lime">'help'</span> to see available commands or <span class="text-blue">'security-scan'</span> to execute diagnostic.</div>
+          <div class="terminal-output-line">------------------------------------------------------------------</div>
+        </div>
+        <div style="padding: 0 1.5rem 1.5rem 1.5rem;">
+          <div class="terminal-prompt-line">
+            <span class="prompt-user">arjun@security-node:~$</span>
+            <input type="text" class="terminal-input" id="terminalInput" placeholder="Type a command (e.g. help, skills, projects, security-scan)..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACT SECTION COMPONENT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-meta">
+          <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> Direct Connection</div>
+          <h2 style="font-size: 3rem; line-height: 1.1;">LET'S BUILD & <br><span class="gradient-text-lime">SECURE THE FUTURE.</span></h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Whether you are looking for a Senior Full Stack Engineer, Cyber Security audit consultation, or modern frontend design work — send a direct transmission.
+          </p>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4 style="font-size: 1.05rem;">Direct Email</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">arjun.m.dev@example.com</p>
+            </div>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon"><i class="fa-solid fa-key"></i></div>
+            <div>
+              <h4 style="font-size: 1.05rem;">PGP Key Fingerprint</h4>
+              <p style="color: var(--accent-neon-lime); font-family: var(--font-mono); font-size: 0.8rem;">4F9A 8B2C 1D0E 3F5A 7B9C</p>
+            </div>
+          </div>
+
+          <div class="timezone-badge">
+            <i class="fa-solid fa-globe"></i> Bengaluru, IST (UTC+5:30) • Open for Global Remote Roles
+          </div>
+        </div>
+
+        <div class="glass-card contact-form-glass">
+          <form id="cyberContactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Name / Handle</label>
+              <input type="text" id="name" class="form-input" placeholder="e.g. Alex Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="e.g. alex@security.io" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" class="form-input" placeholder="e.g. Full Stack & Security Project" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Transmission / Message</label>
+              <textarea id="message" class="form-input" placeholder="Detail your project specifications or security inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-neon" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Transmission
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; margin-bottom: 0.5rem;" class="gradient-text-lime">
+        ARJUN M
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">
+        &copy; <span id="currentYear"></span> ARJUN M. Full Stack Developer • Cyber Security Enthusiast • Frontend Designer.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <div class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <!-- Project Detail Modal Popup -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-shield-cat" style="font-size: 1.25rem; color: var(--accent-neon-lime);"></i>
+    <span id="toastMsg">Message transmitted successfully!</span>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+</body>
 </html>
