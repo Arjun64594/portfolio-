@@ -8,3 +8,20 @@ export default defineConfig({
     react(),
   ],
 })
+
+// import tailwindcss from '@tailwindcss/vite';
+// import react from '@vitejs/plugin-react';
+// import path from 'path';
+// import { defineConfig } from 'vite';
+
+// export default defineConfig(() => {
+//   return {
+//     base: '/portfolio-/', // Configured for https://Arjun64594.github.io/portfolio-/
+//     plugins: [react(), tailwindcss()],
+//     resolve: {
+//       alias: {
+//         '@': path.resolve(import.meta.dirname, '.'),
+//       },
+//     },
+//   };
+// });
